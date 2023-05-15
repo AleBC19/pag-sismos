@@ -16,21 +16,21 @@
   <body class="bg-slate-400">
     <div id="app"></div>
 
-    <section class="grid-cols-2" id="graficas" >
-        <div id="grafico1">
-          <h2>------</h2>
+    <section class="grid-cols-2" id="graficas">
+        <div id="graficaBarras" class="w-8/12">
+          <canvas id="lugares"></canvas>
         </div>
 
-        <div id="grafico2">
-          <h2>------</h2>
+        <div id="">
+          <canvas id="sismosMaxYear"></canvas>
         </div>
 
         <div id="grafico3">
-          <h2>------</h2>
+          <canvas id="cantidadSismosLocation"></canvas>
         </div>
 
         <div id="grafico4">
-          <h2>------</h2>
+          
         </div>
     </section>
 
@@ -42,5 +42,8 @@
 
     <script type="module" src="/main.js"></script>
     <script type="module" src="./js/map.js"></script>
+    <script type="module" src="./js/graficaSismosYear.js"></script>
+    <script type="module" src="./js/graficaMaxMagnitudYear.js"></script>
+    <script type="module" src="./js/graficaCantidadSismosLocation.js"></script>
   </body>
 </html>
