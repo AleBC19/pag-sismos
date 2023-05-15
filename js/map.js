@@ -1,32 +1,23 @@
-var map = L.map('map').setView([37.8, -96], 4);
+import coords from '../db/coords.json'
 
-var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
+let map = L.map('map').setView([17.98, -100.01], 7.2);
+
+let tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 20,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-L.geoJson(statesData).addTo(map);
+const coordinates = coords.map(point => [point.longitude, point.latitude])
 
-function getColor(d) {
-  return d > 1000 ? '#800026' :
-         d > 500  ? '#BD0026' :
-         d > 200  ? '#E31A1C' :
-         d > 100  ? '#FC4E2A' :
-         d > 50   ? '#FD8D3C' :
-         d > 20   ? '#FEB24C' :
-         d > 10   ? '#FED976' :
-                    '#FFEDA0';
-}
-
-function style(feature) {
+const geojsonFeatures = coordinates.map(coord => {
   return {
-      fillColor: getColor(feature.properties.density),
-      weight: 2,
-      opacity: 1,
-      color: 'white',
-      dashArray: '3',
-      fillOpacity: 0.7
+    "type": "Feature",
+    "geometry": {
+      "type": "Point",
+      "coordinates": coord
+    },
+    "properties": {}
   };
-}
+});
 
-L.geoJson(statesData, {style: style}).addTo(map);
+L.geoJson(geojsonFeatures).addTo(map);
