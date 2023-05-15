@@ -10,13 +10,14 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
      integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
      crossorigin=""></script>
-
     <title>SISMOS</title>
   </head>
-  <body class="bg-slate-400">
-    <div id="app"></div>
+  <body class="bg-gray-100">
+    <header class="bg-gray-200 py-10 shadow-md">
+      <h1 class="font-black text-3xl px-4">Análisis de Sismos en el Estado de Guerrero</h1>
+    </header>
 
-    <section class="grid-cols-2" id="graficas">
+    <section class="flex flex-col" id="graficas">
         <div id="graficaBarras" class="w-8/12">
           <canvas id="lugares"></canvas>
         </div>
@@ -42,8 +43,5 @@
 
     <script type="module" src="/main.js"></script>
     <script type="module" src="./js/map.js"></script>
-    <script type="module" src="./js/graficaSismosYear.js"></script>
-    <script type="module" src="./js/graficaMaxMagnitudYear.js"></script>
-    <script type="module" src="./js/graficaCantidadSismosLocation.js"></script>
   </body>
 </html>

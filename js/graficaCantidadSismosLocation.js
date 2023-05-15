@@ -8,7 +8,7 @@ for(let lugar in countSismosLocation) {
   SISMOS_LOCATION.push({ lugar, cantidad })
 }
 
-(async function () {
+async function drawGraphicSismosLocation() {
   new Chart(
     document.getElementById('cantidadSismosLocation'), {
     type: 'bar',
@@ -16,11 +16,13 @@ for(let lugar in countSismosLocation) {
       labels: SISMOS_LOCATION.map(row => row.lugar),
       datasets: [
         {
-          label: 'Sismo de Mayor Magnitud de Cada Año',
+          label: 'Total de Sismos en Ubicaciones del Estado de Guerrero',
           data: SISMOS_LOCATION.map(row => row.cantidad)
         }
       ]
     }
   }
   )
-})();
+}
+
+export default drawGraphicSismosLocation;

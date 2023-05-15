@@ -1,7 +1,7 @@
 import Chart from 'chart.js/auto';
 import magnitudMaxYear from '../db/magnitudMaxYear.json';
 
-(async function () {
+async function drawGraphicSismoMayorYear() {
   new Chart(
     document.getElementById('sismosMaxYear'), {
     type: 'bar',
@@ -16,4 +16,6 @@ import magnitudMaxYear from '../db/magnitudMaxYear.json';
     }
   }
   )
-})();
+}
+
+export default drawGraphicSismoMayorYear;
