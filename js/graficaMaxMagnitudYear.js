@@ -9,7 +9,7 @@ async function drawGraphicSismoMayorYear() {
       labels: magnitudMaxYear.map(row => row.year),
       datasets: [
         {
-          label: 'Sismo de Mayor Magnitud de Cada Año',
+          label: 'Sismo de Mayor Magnitud de Cada Año 2000 - 2023',
           data: magnitudMaxYear.map(row => row.magnitudMax)
         }
       ]

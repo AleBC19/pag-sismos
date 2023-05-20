@@ -1,4 +1,4 @@
-import Chart from 'chart.js/auto';
+import Chart, { Colors } from 'chart.js/auto';
 import sismosForYear from '../db/sismosForYear.json';
 
 async function drawGraphicSismosForYear() {

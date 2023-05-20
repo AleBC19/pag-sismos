@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+  <title>Sismos - Gráficas</title>
+</head>
+<body>
+  <section class=" flex flex-col items-center" id="graficas">
+    <div id="graficaBarras" class="w-8/12 h-4/5 my-5">
+      <canvas id="lugares"></canvas>
+    </div>
+  
+    <div id="" class="w-8/12 h-4/5 my-5">
+      <canvas id="sismosMaxYear"></canvas>
+    </div>
+  
+    <div id="grafico3" class="w-8/12 h-4/5 my-5">
+      <canvas id="cantidadSismosLocation"></canvas>
+    </div>
+  </section>
+
+  <section id="mapas" class="flex justify-center mx-5 h-max">
+    <div id="map" class="h-96 w-3/4"></div>
+  </section>
+
+  <footer class="bg-gray-200 py-10 mt-2">
+    <p class="text-center">
+      “Los datos sismológicos fueron obtenidos por el Servicio Sismológico Nacional (México). Agradecemos a todo el
+      personal del mismo por el mantenimiento de las estaciones, la adquisición y distribución de los datos".
+    </p>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+  <script type="module" src="./js/map.js"></script>
+</body></html>

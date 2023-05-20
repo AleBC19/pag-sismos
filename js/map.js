@@ -1,6 +1,6 @@
 import coords from '../db/coords.json';
 
-let map = L.map('map').setView([17.98, -100.01], 7.2);
+let map = L.map('map').setView([17.98, -100.01], 7.5);
 
 let tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 20,
