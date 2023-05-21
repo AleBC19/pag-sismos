@@ -4,7 +4,11 @@ import drawGraphicSismoMayorYear from './js/graficaMaxMagnitudYear';
 import drawGraphicSismosForYear from './js/graficaSismosYear';
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderGraphs()
+
+  if( document.getElementsByTagName('canvas').length > 1 ) {
+    renderGraphs();
+    return;
+  } 
 })
 
 async function renderGraphs() {
